@@ -4,6 +4,9 @@ import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import { useAuthContext } from "./hooks/useAuthContext";
+import Recipes from "./pages/recipes/Recipes";
+import NewRecipe from "./pages/new_recipe/NewRecipe";
+import MyRecipe from "./pages/myRecipe/MyRecipe";
 
 function App() {
 
@@ -18,6 +21,9 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/login" element={!user ? <Login /> : <Navigate to="/" replace={true} />}></Route>
             <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" replace={true} />}></Route>
+            <Route path="/new-recipe" element={user ? <NewRecipe /> : <Navigate to="/" replace={true} />}></Route>
+            <Route path="/my-recipe" element={user ? <MyRecipe /> : <Navigate to="/" replace={true} />}></Route>
+            <Route path="/recipes" element={<Recipes />}></Route>
           </Routes>
         </BrowserRouter>
       ) : "loading..."}

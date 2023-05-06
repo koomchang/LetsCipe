@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import { useFireStore } from "../hooks/useFireStore";
+import { useNavigate } from "react-router-dom";
 
 export default function DiaryForm({ uid }) {
+
+    const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
@@ -16,7 +19,7 @@ export default function DiaryForm({ uid }) {
     }
 
     useEffect(() => {
-        if(response.success){
+        if (response.success) {
             setTitle('');
             setText('');
         }
@@ -25,7 +28,8 @@ export default function DiaryForm({ uid }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(title, text);
-        addDocument({ uid, title, text })
+        addDocument({ uid, title, text });
+        navigate("/my-recipe");
     }
 
     return (

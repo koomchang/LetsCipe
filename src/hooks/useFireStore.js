@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc } from "firebase/firestore"
 import { useReducer } from "react"
 import { appFireStore, timestamp } from "../firebase/config"
 
@@ -31,7 +31,7 @@ export const useFireStore = (transaction) => {
         dispatch({ type: "isPending" });
         try {
             const createdTime = timestamp.fromDate(new Date());
-            const docRef = await addDoc(colRef, {...doc, createdTime});
+            const docRef = await addDoc(colRef, { ...doc, createdTime });
             console.log(docRef);
             dispatch({ type: 'addDoc', payload: docRef });
         } catch (e) {
@@ -39,10 +39,6 @@ export const useFireStore = (transaction) => {
         }
     }
 
-    const deleteDocument = (id) => {
-
-    }
-
-    return { addDocument, deleteDocument, response }
+    return { addDocument, response }
 }
 

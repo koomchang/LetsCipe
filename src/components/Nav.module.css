@@ -10,10 +10,6 @@
     gap: 16px;
 }
 
-.nav .tit {
-    color: #fff;
-}
-
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -27,4 +23,9 @@
     border: none;
     color: #fff;
     cursor: pointer;
+}
+
+.nav .img {
+    margin-top: 20px;
+    width: 150px;
 }

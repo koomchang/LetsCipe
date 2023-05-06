@@ -19,6 +19,9 @@ export default function Nav() {
                 {user &&
                     <li>
                         <strong>환영합니다 {user.displayName}님!</strong>
+                        <li><Link to="/new-recipe">레시피 작성하기</Link></li>
+                        <li><Link to="/my-recipe">나의 레시피</Link></li>
+                        <li><Link to="/recipes">모든 레시피</Link></li>
                         <button type="button" onClick={logout}>로그아웃</button>
                     </li>
                 }

@@ -6,12 +6,13 @@ import { useCollection } from '../../hooks/useCollection';
 export default function NewRecipe() {
 
     const { user } = useAuthContext();
+    console.log(user);
     const { documents, error } = useCollection('recipe');
 
     return (
         <main className={styles.cont}>
             <aside className={styles.side_menu}>
-                <RecipeForm uid={user.uid}></RecipeForm>
+                <RecipeForm uid={user.uid} displayName={user.displayName}></RecipeForm>
             </aside>
         </main>
     )

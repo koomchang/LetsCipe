@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useFireStore } from "../hooks/useFireStore";
 import { useNavigate } from "react-router-dom";
 
-export default function DiaryForm({ uid }) {
+export default function DiaryForm({ uid, displayName }) {
 
     const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export default function DiaryForm({ uid }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(title, text);
-        addDocument({ uid, title, text });
+        addDocument({ uid, title, text, displayName });
         navigate("/my-recipe");
     }
 

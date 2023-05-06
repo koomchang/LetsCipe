@@ -8,7 +8,9 @@ export default function Nav() {
     const { user } = useAuthContext();
     return (
         <nav className={styles.nav}>
-            <img className={styles.img} src='assets/logo.png' />
+            <Link to="/">
+                <img className={styles.img} src='assets/logo.png' />
+            </Link>
             <ul className={styles.list_nav}>
                 {!user &&
                     <>
@@ -22,7 +24,7 @@ export default function Nav() {
                         <li><Link to="/recipes">모든 레시피</Link></li>
                         <li><Link to="/my-recipe">나의 레시피</Link></li>
                         <li><Link to="/new-recipe">레시피 작성하기</Link></li>
-                        <button type="button" onClick={logout}>로그아웃</button>
+                        <button className={styles.logoutBtn} type="button" onClick={logout}>로그아웃</button>
                     </>
                 }
             </ul>

@@ -29,7 +29,8 @@ export default function DiaryForm({ uid, displayName }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(title, text);
-        addDocument({ uid, title, text, displayName });
+        const data = { uid, title, text, displayName };
+        addDocument(data);
         navigate("/my-recipe");
     }
 

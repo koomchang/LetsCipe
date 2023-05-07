@@ -8,6 +8,7 @@ import Recipes from "./pages/recipes/Recipes";
 import NewRecipe from "./pages/new_recipe/NewRecipe";
 import MyRecipe from "./pages/myRecipe/MyRecipe";
 import Loading from "./components/Loading";
+import Detail from "./pages/detail/Detail";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/new-recipe" element={user ? <NewRecipe /> : <Navigate to="/" replace={true} />}></Route>
             <Route path="/my-recipe" element={user ? <MyRecipe /> : <Navigate to="/" replace={true} />}></Route>
             <Route path="/recipes" element={<Recipes />}></Route>
+            <Route path="/recipes/:id" element={user ? <Detail /> : <Navigate to="/" replace={true} />}></Route>
           </Routes>
         </BrowserRouter>
       ) : <Loading></Loading>}

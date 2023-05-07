@@ -7,6 +7,7 @@ import { useAuthContext } from "./hooks/useAuthContext";
 import Recipes from "./pages/recipes/Recipes";
 import NewRecipe from "./pages/new_recipe/NewRecipe";
 import MyRecipe from "./pages/myRecipe/MyRecipe";
+import Loading from "./components/Loading";
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
             <Route path="/recipes" element={<Recipes />}></Route>
           </Routes>
         </BrowserRouter>
-      ) : "loading..."}
+      ) : <Loading></Loading>}
 
     </div>
   );

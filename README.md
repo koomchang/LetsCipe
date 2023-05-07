@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Let's Cipe - 레시피 공유 플랫폼
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. 프로잭트 소개
 
-In the project directory, you can run:
+나의 레시피를 기록하고 공유 하며 다른 사람들의 레시피까지 공유 받을 수 있는 플랫폼이다.
 
-### `npm start`
+추후 본인의 레시피의 음식을 판매, 다른 사람의 음식을 구매 하는 기능까지 구현하는 것이 목표이다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 2. 배포 링크
 
-### `npm test`
+https://lets-cipe.web.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 3. 팀 소개
+소프트웨어학과 20181637 안금장
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. 사용법
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>메인 화면</h2>
+<img src = "./img.png" height="500">
 
-### `npm run eject`
+처음 사이트에 접속했을 때 나오는 메인화면이다. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<h2>회원가입 </h2>
+<img src = "./register.png" height="500">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Firebase의 Authentication을 이용하여 회원가입, 로그인, 로그아웃을 구현하였다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2>모든 레시피</h2>
+<img src = "./recipes.png" height="500">
 
-## Learn More
+나를 포함한 모든 사람들이 공유한 레시피를 볼 수 있다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2>세부 레시피 정보</h2>
+<img src = "./recipeDetail.png" height="500">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+레시피의 세부사항을 볼 수 있다.
 
-### Code Splitting
+<h2>내가 공유한 레시피</h2>
+<img src = "./myRecipe.png" height="500">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+내가 공유한 레시피만 모아 볼 수 있다.
 
-### Analyzing the Bundle Size
+### 5. 기타
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+웹 클라이언트컴퓨팅 수업을 들으며 React로 화면 구성을 하며 Firebase를 이용해 Authentication과 Database를 연동하고 배포까지 하였다.
 
-### Making a Progressive Web App
+그동안 백엔드 프레임워크만 사용해보았는데 이번 기회에 처음으로 React를 사용할 수 있어서 프론트엔드의 기본적인 동작방식을 배울 수 있었던 것 같다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+또한 Google 의 Firebase가 서버 없이도 이용할 수 있다는 점이 무척 매력있었고 배포까지도 간편하게 할 수 있다는 점이 정말 큰 장점 같았다.

@@ -10,16 +10,17 @@ import MyRecipe from "./pages/myRecipe/MyRecipe";
 import Loading from "./components/Loading";
 import Detail from "./pages/detail/Detail";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
 
   const { isAuthReady, user } = useAuthContext();
   useEffect(() => {
-    document.title = 'Let\'s Cipe - 레시피 공유 사이트';
+    document.title = 'Let\'s Cipe - 레시피 공유 플랫폼';
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100vh" }}>
       {isAuthReady ? (
         <BrowserRouter>
           <Nav />
@@ -32,6 +33,7 @@ function App() {
             <Route path="/recipes" element={<Recipes />}></Route>
             <Route path="/recipes/:id" element={user ? <Detail /> : <Navigate to="/" replace={true} />}></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
       ) : <Loading></Loading>}
 

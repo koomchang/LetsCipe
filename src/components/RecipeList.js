@@ -10,7 +10,7 @@ export default function RecipeList({ recipes }) {
                     const date = new Date(item.createdTime.seconds * 1000);
                     const formattedDate = date.toLocaleString();
                     return (
-                        <Link to={`/recipes/${item.id}`}>
+                        <Link className={styles.link} to={`/recipes/${item.id}`}>
                             <li className={styles.RecipeList} key={item.id} >
                                 <strong className={styles.title}>{item.title}</strong>
                                 <p className={styles.user}> {item.displayName}</p>

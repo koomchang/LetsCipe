@@ -1,7 +1,7 @@
 .cont {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 8.5vh auto;
     padding: 50px 20px;
     text-align: center;
 }

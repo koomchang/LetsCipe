@@ -9,10 +9,14 @@ import NewRecipe from "./pages/new_recipe/NewRecipe";
 import MyRecipe from "./pages/myRecipe/MyRecipe";
 import Loading from "./components/Loading";
 import Detail from "./pages/detail/Detail";
+import { useEffect } from "react";
 
 function App() {
 
   const { isAuthReady, user } = useAuthContext();
+  useEffect(() => {
+    document.title = 'Let\'s Cipe - 레시피 공유 사이트';
+  }, []);
 
   return (
     <div className="App">

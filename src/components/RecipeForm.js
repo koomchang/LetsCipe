@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useFireStore } from "../hooks/useFireStore";
 import { useNavigate } from "react-router-dom";
+import styles from "./RecipeForm.module.css";
 
 export default function DiaryForm({ uid, displayName }) {
 
@@ -34,16 +35,20 @@ export default function DiaryForm({ uid, displayName }) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles["form-container"]}>
                 <fieldset>
                     <legend>레시피 작성</legend>
-                    <label htmlFor="tit">제목 : </label>
-                    <input id="tit" type="text" value={title} required onChange={handleData} />
+                    <div className={styles["form-field"]}>
+                        <label htmlFor="tit" className={styles["form-label"]}>제목 </label>
+                        <input id="tit" type="text" value={title} required onChange={handleData} className={styles["form-input"]} />
+                    </div>
 
-                    <label htmlFor="txt">내용 : </label>
-                    <textarea id="txt" type="text" value={text} required onChange={handleData}></textarea>
+                    <div className={styles["form-field"]}>
+                        <label htmlFor="txt" className={styles["form-label"]}>내용 </label>
+                        <textarea id="txt" type="text" value={text} required onChange={handleData} className={styles["form-textarea"]}></textarea>
+                    </div>
 
-                    <button type="submit">저장하기</button>
+                    <button type="submit" className={styles["form-button"]}>저장하기</button>
                 </fieldset>
             </form>
         </>

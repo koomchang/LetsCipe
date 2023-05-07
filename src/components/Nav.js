@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './Nav.module.css'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext';
+import img from './logo.png';
 
 export default function Nav() {
     const { logout } = useLogout();
@@ -9,7 +10,7 @@ export default function Nav() {
     return (
         <nav className={styles.nav}>
             <Link to="/">
-                <img className={styles.img} src='assets/logo.png' />
+                <img className={styles.img} src={img} />
             </Link>
             {user &&
                 <>

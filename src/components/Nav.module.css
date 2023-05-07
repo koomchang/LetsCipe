@@ -25,6 +25,10 @@
     cursor: pointer;
 }
 
+.nav li {
+    font-family: 'PretendardMid';
+}
+
 .nav .img {
     margin-top: 20px;
     width: 150px;

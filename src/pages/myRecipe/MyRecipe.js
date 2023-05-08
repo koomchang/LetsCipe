@@ -6,6 +6,7 @@ import RecipeList from '../../components/RecipeList';
 export default function Recipes() {
 
     const { user } = useAuthContext();
+    // 나의 recipe 가져옴
     const { documents, error } = useMyRecipeCollection('recipe', ["uid", "==", user.uid]);
 
     return (

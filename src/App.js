@@ -15,10 +15,13 @@ import Footer from "./components/Footer";
 function App() {
 
   const { isAuthReady, user } = useAuthContext();
+
+  // html title 지정
   useEffect(() => {
     document.title = 'Let\'s Cipe - 레시피 공유 플랫폼';
   }, []);
 
+  // 삼항연산자를 이용해서 Auth를 받아오기 전에는 Loading 컴포넌트를 보여줌
   return (
     <div className="App" style={{ height: "100vh" }}>
       {isAuthReady ? (
@@ -36,7 +39,6 @@ function App() {
           <Footer />
         </BrowserRouter>
       ) : <Loading></Loading>}
-
     </div>
   );
 }

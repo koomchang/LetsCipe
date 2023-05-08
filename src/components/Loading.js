@@ -1,6 +1,8 @@
 import React from 'react';
 import { Background, LoadingText } from './LoadingStyles';
 
+
+// 로딩화면 컴포넌트
 export default () => {
     return (
         <Background>

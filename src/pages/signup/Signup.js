@@ -9,6 +9,7 @@ export default function Signup() {
     const [displayName, setDisplayName] = useState('');
     const { error, isPending, signup } = useSignup();
 
+    // email, password, text를 react에서 관리하도록 설정
     const handleData = (event) => {
         if (event.target.type === "email") {
             setEmail(event.target.value);
@@ -18,7 +19,7 @@ export default function Signup() {
             setDisplayName(event.target.value);
         }
     }
-
+    // form submit 할 때 이벤트 핸들링
     const handleSubmit = (event) => {
         event.preventDefault();
         signup(email, password, displayName);

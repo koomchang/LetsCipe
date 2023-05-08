@@ -8,6 +8,7 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const { error, isPending, login } = useLogin();
 
+    //  email, password를 리액트에서 관리하도록 설정
     const handleData = (event) => {
         if (event.target.type === "email") {
             setEmail(event.target.value);
@@ -16,6 +17,7 @@ export default function Login() {
         }
     }
 
+    // form submit 할 때 이벤트 핸들린
     const handleSubmit = (event) => {
         event.preventDefault();
         login(email, password);

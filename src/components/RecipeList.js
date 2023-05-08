@@ -5,7 +5,7 @@ export default function RecipeList({ recipes }) {
 
     return (
         <>
-            {
+            {   // recipes를 props로 받아서 map을 이용하여 렌더링
                 recipes.map((item) => {
                     const date = new Date(item.createdTime.seconds * 1000);
                     const formattedDate = date.toLocaleString();

@@ -6,7 +6,6 @@ import { useCollection } from '../../hooks/useCollection';
 export default function NewRecipe() {
 
     const { user } = useAuthContext();
-    console.log(user);
     const { documents, error } = useCollection('recipe');
 
     return (

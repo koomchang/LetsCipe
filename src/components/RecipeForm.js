@@ -3,14 +3,14 @@ import { useFireStore } from "../hooks/useFireStore";
 import { useNavigate } from "react-router-dom";
 import styles from "./RecipeForm.module.css";
 
-export default function DiaryForm({ uid, displayName }) {
-
+export default function RecipeForm({ uid, displayName }) {
     const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
     const { addDocument, response } = useFireStore('recipe');
 
+    // 제목과 내용을 react에서 관리 하도록 설정
     const handleData = (event) => {
         if (event.target.id === 'tit') {
             setTitle(event.target.value);
@@ -19,6 +19,7 @@ export default function DiaryForm({ uid, displayName }) {
         }
     }
 
+    // 데이터가 성공적으로 저장되면 제목, 내용을 초기화 해줌
     useEffect(() => {
         if (response.success) {
             setTitle('');
@@ -26,9 +27,10 @@ export default function DiaryForm({ uid, displayName }) {
         }
     }, [response.success])
 
+
+    // form submit 이벤트 핸들링
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(title, text);
         const data = { uid, title, text, displayName };
         addDocument(data);
         navigate("/my-recipe");

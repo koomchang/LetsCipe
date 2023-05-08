@@ -10,14 +10,9 @@ export default function Detail() {
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
 
+    // param 으로 받은 id로 해당 문서 뽑아옴 (firebase 공식문서 코드 참고 하였음)
     useEffect(() => {
         const fetchRecipe = async () => {
-
-            // const dbService = getFirestore();
-            // const docSnap = doc(dbService, `recipes/%{id}`);
-
-
-
             const db = appFireStore;
             const docRef = doc(db, "recipe", id);
             const docSnap = await getDoc(docRef);

@@ -1,8 +1,11 @@
 import styles from './Footer.module.css';
+
+// fontawesome icon 이용
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faT } from '@fortawesome/free-solid-svg-icons';
 
+// Footer 컴포넌트 생성
 export default function Footer() {
     return (
         <footer className={styles.footer}>
